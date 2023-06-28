@@ -1,0 +1,23 @@
+﻿@model List<StudentApp.Models.Student>
+
+    <div>
+        <table class="table">
+            <thead>
+               <tr>
+                   <th>S.N</th>
+                   <th>Name</th>
+                   <th>Address</th>
+               </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model){
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Address</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
