@@ -1,5 +1,6 @@
 ﻿@model List<StudentApp.Models.Student>
-
+<a asp-action="StudentList" asp-controller="Students" class="btn btn-primary"
+data-ajax="true" id="btn-click" hidden data-ajax-method="get" data-ajax-update="#stdList" >click</a>
     <div>
         <table class="table">
             <thead>
@@ -8,16 +9,10 @@
                    <th>Name</th>
                    <th>Address</th>
                </tr>
-            </thead>
-            <tbody>
-                @foreach(var item in Model){
-                    <tr>
-                        <td>@item.id</td>
-                        <td>@item.Name</td>
-                        <td>@item.Address</td>
-                    </tr>
-                }
-
+            </thead>          
+            <tbody id="stdList">
+                
             </tbody>
         </table>
     </div>
+   

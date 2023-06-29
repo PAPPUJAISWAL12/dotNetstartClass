@@ -6,6 +6,11 @@ namespace StudentApp.Controllers
 	public class StudentsController : Controller
 	{
 		public IActionResult Index()
+		{			
+			return View();
+		}
+
+		public IActionResult StudentList()
 		{
 			List<Student> stdList = new List<Student>
 			{
@@ -14,7 +19,11 @@ namespace StudentApp.Controllers
 				new Student{id=3,Name="rita",Address="Itahari"},
 				new Student{id=4,Name="gita",Address="Itahari"}
 			};
-			return View(stdList);
+			return PartialView("_StudentList",stdList);
+		}
+		public IActionResult StudentListView()
+		{
+			return View();
 		}
 	}
 }
