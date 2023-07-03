@@ -25,5 +25,10 @@ namespace StudentApp.Controllers
 		{
 			return View();
 		}
+
+		public IActionResult Feature()
+		{
+			return View();
+		}
 	}
 }
