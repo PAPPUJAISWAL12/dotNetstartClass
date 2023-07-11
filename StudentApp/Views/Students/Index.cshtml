@@ -29,6 +29,36 @@
         width:300px;
         margin:auto;
     }
+        .card{
+    position:relative;
+    transition:0.5s;
+    }
+
+    .card .team-info {
+        background: rgba(0,0,0,0.5);
+        width: 100%;
+        left: 0;
+        right: 0;
+        position: absolute;
+        opacity:0;
+    }
+    .card:hover .team-info {
+        background: rgba(0,0,0,0.5);
+        width: 100%;
+        left: 0;
+        right: 0;
+        top:0;
+        bottom:0;
+        position: absolute;
+        opacity: 2;
+        height:225px;
+        color:white;
+        height:1px;
+    }
+    .card:hover .team-info .text-center{
+        margin-top:120px;        
+    }
+   
 </style>
 <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
@@ -76,12 +106,19 @@
                 <h2>Our Team</h2>
                 <div class="line"></div>
             </div>
+            </div>
             <div class="row mt-4">
                 <div class="col-sm-4">
                 <div class="card p-2 m-2" data-aos="zoom-in-up">
                         <div class="card-content">
-                        <img src="~/images/istockphoto-1392125218-170667a.webp" class="" />
+                        <img src="~/images/istockphoto-1392125218-170667a.webp" class="myimage" />
                         </div>
+                        <div class="team-info">
+                           <div class="text-center">
+                                <h2>Ram</h2>
+                                 <p style="margin-left:140px;">itahari</p>
+                           </div>
+                           </div>
                     </div>
                 <p>When using button classes on... <a class="btn btn-primary m-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Read more...</a></p>
                
@@ -94,15 +131,26 @@
                 <div class="col-sm-4">
                     <div class="card p-2 m-2">
                         <div class="card-content">
-                        <img src="~/images/istockphoto-1392125218-170667a.webp" class="" />
+                        <img src="~/images/istockphoto-1392125218-170667a.webp" class="myimage" />
+                        </div>
+                         <div class="team-info">
+                           <div class="text-center">
+                                <h2>Ram</h2>
+                                  <p style="margin-left:140px;">itahari</p>
+                           </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                 <div class="card p-2 m-2">
                     <div class="card-content">
-                        <img src="~/images/istockphoto-1392125218-170667a.webp" class="" />
+                        <img src="~/images/istockphoto-1392125218-170667a.webp" class="myimage" />
                     </div>
+                     <div class="team-info">
+                           <div class="text-center">
+                                <h2>Ram</h2>
+                              <p style="margin-left:140px;">itahari</p>
+                           </div>
                 </div>
                 </div>
             </div>

@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using StudentApp.Models;
+
 namespace StudentApp
 {
 	public class Program
@@ -6,6 +9,7 @@ namespace StudentApp
 		{
 			var builder = WebApplication.CreateBuilder(args);
 			builder.Services.AddControllersWithViews();
+			builder.Services.AddDbContext<StudentBlogContext>(option => option.UseSqlServer(builder.Configuration["Conn"]));
 			var app = builder.Build();
 			app.UseStaticFiles();
 			app.UseRouting();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rY9RE4nu6k0Vqp8y1pY9jn+Vv2Rs3WUZtrnKxR8fGdE=",
+  "Hash": "ySZfeYND9CwNTDDKb+gLumszOUQkud5Zwxt505tfXMI=",
   "Source": "StudentApp",
   "BasePath": "_content/StudentApp",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\css\\StyleSheet.css",
+      "SourceId": "StudentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\",
+      "BasePath": "_content/StudentApp",
+      "RelativePath": "css/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
+    },
     {
       "Identity": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\Images\\istockphoto-1392125218-170667a.webp",
       "SourceId": "StudentApp",
@@ -102,6 +119,40 @@
       "OriginalItemSpec": "wwwroot\\Images\\undraw_mobile_web_-2-g8b.svg"
     },
     {
+      "Identity": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\Images\\undraw_personal_website_re_c8dv.svg",
+      "SourceId": "StudentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\",
+      "BasePath": "_content/StudentApp",
+      "RelativePath": "Images/undraw_personal_website_re_c8dv.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\undraw_personal_website_re_c8dv.svg"
+    },
+    {
+      "Identity": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\Images\\undraw_profile_data_re_v81r.svg",
+      "SourceId": "StudentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\",
+      "BasePath": "_content/StudentApp",
+      "RelativePath": "Images/undraw_profile_data_re_v81r.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\undraw_profile_data_re_v81r.svg"
+    },
+    {
       "Identity": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\Images\\undraw_services_re_hu5n.svg",
       "SourceId": "StudentApp",
       "SourceType": "Discovered",
@@ -117,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\undraw_services_re_hu5n.svg"
+    },
+    {
+      "Identity": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\Images\\undraw_team_work_k-80-m.svg",
+      "SourceId": "StudentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\",
+      "BasePath": "_content/StudentApp",
+      "RelativePath": "Images/undraw_team_work_k-80-m.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\undraw_team_work_k-80-m.svg"
     },
     {
       "Identity": "H:\\visual studio\\StudentApp\\StudentApp\\wwwroot\\jquery\\jquery.js",
