@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using StudentApp.Models;
 
 namespace StudentApp.Controllers
 {
+	[Authorize(Roles ="Admin")]
 	public class UserMessagesController : Controller
 	{
 		private readonly StudentBlogContext _context;

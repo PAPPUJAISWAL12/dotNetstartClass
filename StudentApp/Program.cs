@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using StudentApp.Models;
 
@@ -10,6 +11,7 @@ namespace StudentApp
 			var builder = WebApplication.CreateBuilder(args);
 			builder.Services.AddControllersWithViews();
 			builder.Services.AddDbContext<StudentBlogContext>(option => option.UseSqlServer(builder.Configuration["Conn"]));
+			builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option => option.LoginPath = "/Students/Index");
 			var app = builder.Build();
 			app.UseStaticFiles();
 			app.UseRouting();

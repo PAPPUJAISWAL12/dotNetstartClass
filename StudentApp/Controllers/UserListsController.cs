@@ -28,19 +28,13 @@ namespace StudentApp.Controllers
         }
 
         // GET: UserLists/Details/5
-        public IActionResult Details(int? id)
+        public IActionResult Details()
         {
-            if (id == null || _context.UserLists == null)
-            {
-                return NotFound();
-            }
+            
 
-            var userList = _context.UserLists.Where(x => x.UserId == id).FirstOrDefault();
+            var userList = _context.UserLists.Where(x => x.UserId == Convert.ToInt32(User.Identity.Name)).FirstOrDefault();
                
-            if (userList == null)
-            {
-                return NotFound();
-            }
+            
 
             return View(userList);
         }

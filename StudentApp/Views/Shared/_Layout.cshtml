@@ -9,16 +9,17 @@
     <link href="~/css/stylesheet.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js" integrity="sha512-DedNBWPF0hLGUPNbCYfj8qjlEnNE92Fqn7xd3Sscfu7ipy7Zu33unHdugqRD3c4Vj7/yLv+slqZhMls/4Oc7Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(document).ready(function () {
             AOS.init();
         });
     </script>
     <style>
-        .bg-navbar{
-            background-color:blue;
+        .bg-navbar {
+            background-color: blue;
         }
-
 
     </style>
     <title>studentApp-@ViewData["title"]</title>
@@ -33,35 +34,51 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" asp-action="StudentListView" asp-controller="Students">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-action="Feature" asp-controller="Students">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-action="Index" asp-controller="AboutUs">AboutUs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                        @if(User.Identity.IsAuthenticated){
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Index" asp-controller="UserLists">UserList</a>
+                            </li>
+                        }else{
+                            <li class="nav-item">
+                                <a class="nav-link active" asp-action="StudentListView" asp-controller="Students">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Feature" asp-controller="Students">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Index" asp-controller="AboutUs">AboutUs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled">Disabled</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        }
                     </ul>
-                   
+
                 </div>
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="modal" style="cursor:pointer;" data-bs-target="#staticBackdrop">Login</a>
-                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Logout" asp-controller="Home">Logout</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" style="cursor:pointer;" data-bs-target="#staticBackdrop">Login</a>
+                        </li>
+                    }
+
                 </ul>
             </div>
         </nav>
@@ -102,13 +119,11 @@
 
     <footer style="margin-top:20px;background-color:red; height:300px;">
         <div>
-              
         </div>
     </footer>
     <a class="btn btn-primary" id="btn-loginpage" asp-action="Index" asp-controller="Home" data-ajax="true" data-ajax-method="get" data-ajax-update="#loginpage" hidden></a>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog" id="loginpage">
-
         </div>
     </div>
     <script>

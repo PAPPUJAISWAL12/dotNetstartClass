@@ -6,8 +6,16 @@ namespace StudentApp.Controllers
 	public class StudentsController : Controller
 	{
 		public IActionResult Index()
-		{			
-			return View();
+		{
+			if (User.Identity.IsAuthenticated)
+			{
+				return RedirectToAction("dashbord", "Home");
+			}
+			else
+			{
+				return View();
+			}
+			
 		}
 
 		public IActionResult StudentList()
