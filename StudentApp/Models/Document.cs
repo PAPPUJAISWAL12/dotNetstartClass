@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentApp.Models;
 
@@ -12,6 +14,12 @@ public partial class Document
     public string Title { get; set; } = null!;
 
     public string Descriptions { get; set; } = null!;
+
+    public string? DocFile { get; set; }
+    
+    [NotMapped]
+    [DataType(DataType.Upload)]
+    public IFormFile? FileUpload { get; set; }
 
     public virtual DocumentCategory DocCategory { get; set; } = null!;
 }

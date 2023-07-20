@@ -32,6 +32,8 @@ public partial class StudentBlogContext : DbContext
         {
             entity.HasKey(e => e.DocId).HasName("PK__Document__3EF188AD6F94F860");
 
+            entity.Property(e => e.DocFile).HasDefaultValueSql("('test')");
+
             entity.HasOne(d => d.DocCategory).WithMany(p => p.Documents)
                 .HasForeignKey(d => d.DocCategoryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
